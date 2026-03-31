@@ -36,3 +36,28 @@ Pour tester le projet sur votre machine :
 1. Clonez le dépôt :
    ```bash
    git clone (https://github.com/arielfelipe168/eco_preserve.git)
+
+2. **Installer les dépendances PHP :**
+   Assurez-vous d'avoir [Composer](https://getcomposer.org/) installé, puis lancez :
+   ```bash
+   composer install
+
+## 🗄️ Configuration de la Base de Données
+
+Pour faire fonctionner l'application, vous devez importer le schéma SQL :
+
+1.  **Créer la base de données :** 
+    Lancez MySQL (via XAMPP/WAMP) et créez une base de données nommée `eco_preserve_db`.
+2.  **Importer le schéma :**
+    Importez le fichier situé dans `/databases/eco_preserve_db.sql` dans votre nouvelle base de données via PHPMyAdmin ou en ligne de commande :
+    ```bash
+    mysql -u root -p eco_preserve_db < databases/eco_preserve_db.sql
+    ```
+3.  **Configurer la connexion :**
+    Ouvrez le fichier `db_config.php` et vérifiez que les paramètres correspondent à votre environnement local :
+    ```php
+    $host = 'localhost';
+    $dbname = 'eco_preserve_db';
+    $username = 'root';
+    $password = ''; // Par défaut vide sur XAMPP (mettez-y votre mot de passe)
+    ```

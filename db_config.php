@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $dbname = 'eco_preserve_db';
-$username = 'root';
+$username = '';
 $password = '';
 
 try {

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^7.0",
+        "fedapay/fedapay-php": "^0.4.7"
+    }
+}
